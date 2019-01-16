@@ -52,15 +52,12 @@ captura de Tela<br>
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
 
-    
 
 ### 5.MODELO CONCEITUAL<br>
   
-![modelo](https://github.com/MarceloMendes94/trab01/blob/master/modelo/imagem_modelo_conceitual.PNG)  
+![modelo](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/Modelos/modelo_conceitual_imagem.PNG)  
 
-
-
-![notação UML](https://github.com/MarceloMendes94/trab01/blob/master/modelo/diagrama_de_classe.PNG)  
+![notação UML]()  
 
 #### 5.2 DECISÕES DE PROJETO
   
