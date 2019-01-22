@@ -87,7 +87,29 @@ insert into atividade ( descricao, data , hora_inicio time, hora_fim, fk_Projeto
     ("incio da documentção"             ,"02-07-2019","12:15:03","17:07:07",4,"20132bsi9856"),
     ("envio para laboratório"           ,"02-08-2019","13:15:03","16:00:05",4,"20132bsi9856"),
     /*bolsista 9*/
-)
+    ("pesquisa bibliográfica"       ,"02-04-2019","12:37:43","17:00:57",5,"20081bsi0012"),
+    ("pesquisa bibliográfica"       ,"02-05-2019","13:07:35","17:19:47",5,"20081bsi0012"),
+    ("pesquisa bibliográfica"       ,"02-06-2019","12:47:35","16:29:12",5,"20081bsi0012"),
+    ("prospecção de valores de epi" ,"02-07-2019","12:38:03","17:03:00",5,"20081bsi0012"),
+    ("compra de materiais"          ,"02-08-2019","12:29:03","16:00:05",5,"20081bsi0012"),
+    /*bolsista 10*/
+    ("contato com empresas e agendamento de visitas"    ,"02-11-2019","12:37:43","17:00:57",5,"20171eme1235"),
+    ("visita técnica"                                   ,"02-12-2019","13:07:35","17:19:47",5,"20171eme1235"),
+    ("visita técnica"                                   ,"02-13-2019","12:47:35","16:29:12",5,"20171eme1235"),
+    ("analise de resultados"                            ,"02-14-2019","12:38:03","17:03:00",5,"20171eme1235"),
+    ("inicio do relatório dos dados obtidos"            ,"02-15-2019","12:29:03","16:00:05",5,"20171eme1235"),
+    /*bolsista 11*/
+    ("pesquisa bibliográfica"   ,"01-15-2019","11:21:11","16:31:01",6,"20171eme3595"),
+    ("pesquisa bibliográfica"   ,"01-16-2019","13:47:15","17:22:47",6,"20171eme3595"),
+    ("desenvolvimento de um API","01-22-2019","11:43:35","16:52:06",6,"20171eme3595"),
+    ("elaboração de software"   ,"01-23-2019","12:25:12","17:30:03",6,"20171eme3595"),
+    ("elaboração de software"   ,"01-29-2019","12:11:11","17:27:01",6,"20171eme3595"),    
+    /*bolsista 12*/
+    ("pesquisa bibliográfica"   ,"01-14-2019","11:37:01","15:17:10",6,"20181cat2564"),
+    ("desenvolvimento de um API","01-18-2019","11:25:35","16:37:29",6,"20181cat2564"),
+    ("desenvolvimento de um API","01-21-2019","12:01:39","17:27:19",6,"20181cat2564"),
+    ("elaboração de software"   ,"01-25-2019","11:52:35","16:19:06",6,"20181cat2564"),
+    ("elaboração de software"   ,"01-28-2019","12:39:45","15:48:01",6,"20181cat2564"));
     
 
 
