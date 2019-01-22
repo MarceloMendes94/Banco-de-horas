@@ -57,12 +57,16 @@ captura de Tela<br>
   
 ![modelo](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/Modelos/modelo_conceitual_imagem.PNG)  
 
-![notação UML]()  
+![notação UML](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/POO/diagrama.PNG)  
 
-#### 5.2 DECISÕES DE PROJETO
+#### 5.2 DOCUMENTO DE REQUISISTOS
+
+![Documentos de Requisistos](https://github.com/MarceloMendes94/Banco-de-horas/tree/master/)
+
+#### 5.3 DECISÕES DE PROJETO
   
 
-#### 5.3 DESCRIÇÃO DOS DADOS 
+#### 5.4 DESCRIÇÃO DOS DADOS 
 
 1. tabela funcao <br>
 
@@ -112,6 +116,7 @@ captura de Tela<br>
 
 ### 6	MODELO LÓGICO<br>
 
+![modelo lógico](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/Modelos/modelo_logico_imagem.PNG)
 
 ### 7	MODELO FÍSICO<br>
           
