@@ -2,9 +2,9 @@ CREATE TABLE Projeto (
     codigo serial PRIMARY KEY,
     nome varchar(75),
     descicao varchar(288),
-    fk_Fiador_codigo serial,
+    fk_Fiador_codigo serial/*,
     fk_Bolsista_matricula varchar(20),
-    fk_Coordenador_matricula varchar(20)
+    fk_Coordenador_matricula varchar(20)*/
 );
 
 CREATE TABLE Bolsista (
@@ -36,19 +36,20 @@ CREATE TABLE atividade (
     fk_Bolsista_matricula varchar(20)
 );
  
-ALTER TABLE Projeto ADD CONSTRAINT FK_Projeto_1
+/*ALTER TABLE Projeto ADD CONSTRAINT FK_Projeto_1
     FOREIGN KEY (fk_Bolsista_matricula)
     REFERENCES Bolsista (matricula)
-    ON DELETE RESTRICT;
+    ON DELETE RESTRICT;*/
  
 ALTER TABLE Projeto ADD CONSTRAINT FK_Projeto_2
-    FOREIGN KEY (fk_atividade_codigo)
-    REFERENCES atividade (codigo)
+    FOREIGN KEY (fk_Fiador_codigo)
+    REFERENCES Fiador (codigo)
     ON DELETE RESTRICT;
  
-ALTER TABLE Projeto ADD CONSTRAINT FK_Projeto_3
-    FOREIGN KEY (fk_Coordenador_matricula, fk_Fiador_codigo???)
-    REFERENCES Coordenador (matricula, ???);
+/*ALTER TABLE Projeto ADD CONSTRAINT FK_Projeto_3
+    FOREIGN KEY (fk_Coordenador_matricula)
+    REFERENCES Coordenador (matricula)
+    ON DELETE RESTRICT;*/
  
 ALTER TABLE Bolsista ADD CONSTRAINT FK_Bolsista_1
     FOREIGN KEY (fk_atividade_codigo)

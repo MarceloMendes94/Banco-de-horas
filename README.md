@@ -119,7 +119,8 @@ captura de Tela<br>
 ![modelo lógico](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/Modelos/modelo_logico_imagem.PNG)
 
 ### 7	MODELO FÍSICO<br>
-          
+
+![modelo físico](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/Modelos/modelo_fisico.sql)         
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
