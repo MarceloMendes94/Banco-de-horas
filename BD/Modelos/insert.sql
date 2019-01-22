@@ -1,12 +1,12 @@
 insert into Fiador(nome)values(
     ("vale"),("polo vitoria"),("arcelor mittal"),("bnds"),("embrapii"));
 
-insert into Projeto (nome, descricao,fk_Fiador_codigo serial)values
-(   ("banco de horas","elaboração de uma bando de horas        para registro de bolsistas",2),
+insert into Projeto (nome, descricao,fk_Fiador_codigo)values
+(   ("banco de horas","elaboração de uma bando de horas para registro de bolsistas",2),
  
     ("laminação de aço","estudo sobre tecnicas de laminação",3),
  
-    ("prospecção de projetos","elaboração de uma plataforma online de prospecção de projtos",2),
+    ("prospecção de projetos","elaboração de uma plataforma online de prospecção de projetos",2),
  
     ("residuos no ar","um relatório da quatidade de minério pelos pontos da grande vitória",1),
  
