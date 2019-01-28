@@ -9,7 +9,7 @@ insert into Projeto (nome, descicao,fk_Fiador_codigo)values
 ('Relatório do uso EPI'             ,'pesquisa com empresas da grande vitória sobre acidentes no trabalho'   ,4), 
 ('Ferramenta de mineração de dados' ,'criação de um ferramenta de mineração de dados para compra de produtos',5);
 
-insert into Bolsista (matricula, nome, sobrenome)values
+insert into Bolsista (matricula, nome, sobrenome,fk_Projeto_codigo)values
     ('20151bsi0436','marcelo','Mendes',1),
     ('20162cat3256','eduardo','Faria',2),
     ('20141eme4568','silvana','Porto',2),
@@ -23,7 +23,7 @@ insert into Bolsista (matricula, nome, sobrenome)values
     ('20171eme3595' ,'Jofrey','Baratheon',6),
     ('20181cat2564' ,'Ramsey','Bolton',6);
 
-insert into Coordenador (matricula, nome, sobrenome)values
+insert into Coordenador (matricula, nome, sobrenome,fk_Projeto_codigo)values
     ('20111prf0235','Stannis','Baratheon',1),
     ('20151prf1546','Shireen','Baratheon',2),
     ('20102prf1111','Renly','Baratheon',3),
