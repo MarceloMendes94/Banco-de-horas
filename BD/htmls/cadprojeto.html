@@ -12,49 +12,42 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-     <div class="container">
-          <div class="row justify-content-start">
-          <div class="col-8">
-              <form>
-                  <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-            </form>
-         </div>
-         </div>
-    </div> 
-      
-      
-      
-      
-      
-      
+    <h1>Banco de horas.</h1><br>
+      <form>
+         <div class="row justify-content-center">
+            <div class="col-4">
+                    <label for="exampleInputEmail1">Nome do projeto.</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nome do projeto">
+                <br>
+                    <label >Descrição do projeto.</label>
+                    <div class="input-group">
+                        <textarea class="form-control" aria-label="With textarea" style="height: 260px"></textarea>
+                    </div>
+                    
+            </div>
+            <div class="col-4">
+                    <label for="exampleInputEmail1">Coordenador do projeto</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="matrícula">
+                <br>
+                <label for="exampleInputEmail1">Bolsista 1.</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="matrícula">
+                <br>
+                <label for="exampleInputEmail1">Bolsista 2.</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="matrícula">
+                <br>
+                 <small class="form-text text-muted">Caso o projeto tenha mais de dois bolsistas é possível alterar e inserir o projeto depois, consulte o card aletrar projeto.</small><br>
+                <button class="btn btn-primary" type="submit">Inserir</button>
+            </div>
+          </div>
+      </form>
+          
+          
+          
+          
+          
+          
+          
+        
       
       
       
