@@ -57,7 +57,7 @@ captura de Tela<br>
   
 ![modelo](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/Modelos/modelo_conceitual_imagem.PNG)  
 
-![notação UML](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/POO/diagrama.PNG)  
+![notação UML](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/An%C3%A1lise/digrama%20de%20classes.PNG)  
 
 #### 5.2 DOCUMENTO DE REQUISISTOS
 
