@@ -3,21 +3,26 @@
         private $codigo;
         private $nome;       
 
+
+        
         /**
-         * Getter and Setter
+         * Construtor
          */
-        public function getNome()
-        {
-                return $this->nome;
+        public function Fiador($c,$n){
+                $this->nome = $n;
+                $this->codigo = $c;
         }
- 
-        public function setNome($nome)
-        {
-                $this->nome = $nome;
-
-                return $this;
+        /**
+         * funções
+         */
+        public function show_f(){
+                echo   $this->nome." ".$this->codigo;
         }
 
+
+        /**
+         * Get the value of codigo
+         */ 
         public function getCodigo()
         {
                 return $this->codigo;
@@ -29,16 +34,25 @@
 
                 return $this;
         }
-        
+
         /**
-         * Construtor
-         */
-        public function Fiador($c,$n){
-            setNome($n);
-            setCodigo($c);
+         * Get the value of nome
+         */ 
+        public function getNome()
+        {
+                return $this->nome;
         }
 
+        /**
+         * Set the value of nome
+         *
+         * @return  self
+         */ 
+        public function setNome($nome)
+        {
+                $this->nome = $nome;
 
-
+                return $this;
+        }
     }
 ?>

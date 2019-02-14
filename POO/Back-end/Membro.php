@@ -1,12 +1,41 @@
 <?php
-Class Membro{
+Class  Membro{
     //atributos 
     var $matricula;
     var $nome;
     var $sobrenome;
 
-        function mostrar_membro($membro){
-            echo " $membro->matricula   $membro->nome   $membro->sobrenome";        
+        
+        public function getSobrenome(){
+            return $this->sobrenome;
+        }
+
+        public function setSobrenome($sobrenome){
+            $this->sobrenome = $sobrenome;
+            return $this;            
+        }
+ 
+        public function getNome(){
+            return $this->nome;
+        }
+
+        public function setNome($nome)
+        {
+            $this->nome = $nome;
+            return $this;
+        }
+        
+        public function getMatricula()
+        {
+            return $this->matricula;
+        }
+ 
+        public function setMatricula($matricula)
+        {
+            $this->matricula = $matricula;
+            return $this;
         }
     }
+
+   
 ?>

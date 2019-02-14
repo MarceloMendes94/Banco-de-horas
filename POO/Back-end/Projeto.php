@@ -62,16 +62,12 @@
          *  construtor
          */
         public function Projeto($nome,$descricao,$codigo,$fiador){
-            setNome($nome);
-            setDescricao($descricao);
-            setCodigo($codigo);
-            setFiador($fiador);
+            $this->setNome($nome);
+            $this->setDescricao($descricao);
+            $this->setCodigo($codigo);
+            $this->setFiador($fiador);
         }
-        /**
-         *  persistencia 
-        */
-
-
+        
 
     }
 ?>
