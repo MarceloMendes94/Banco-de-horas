@@ -24,21 +24,20 @@ function conexaoBanco(){
  * retorna com um string html 
  */
 function queryapresentacao($conn,$codigo_projeto){
-    $sql_query="SELECT projeto.nome AS nome_projeto,
-                    projeto.descicao AS descricao,
+	$titulo="";
+    $descricao="";
+    $coordenador="";
+    $bolsistas="";    
+	$sql_query="SELECT projeto.nome AS nome_projeto,
+                    projeto.descricao AS descricao,
                     CONCAT(bolsista.nome,' ', bolsista.sobrenome) AS nome_bolsista,                    
                     CONCAT(coordenador.nome,' ',coordenador.sobrenome)AS nome_coor    
                 FROM projeto 
                 INNER JOIN bolsista ON bolsista.fk_projeto_codigo =".$codigo_projeto."
                 INNER JOIN coordenador ON coordenador.fk_projeto_codigo =".$codigo_projeto."
                 WHERE projeto.codigo =".$codigo_projeto.";";
-        
-    $result = $conn->query($sql_query);
-
-    $titulo;
-    $descricao;
-    $coordenador;
-    $bolsistas=""; 
+    $conn   = conexaoBanco();    
+    $result = $conn->query($sql_query);   
 
     if ($result->num_rows > 0) {
         // output data of each row
@@ -108,16 +107,20 @@ Function Coordenador_insert($m,$n,$s){
 Function Projeto_insert($nome , $desc , $mat , $fiador){
     $conn=conexaoBanco();
     //preciso pegar numeros de registros
-    $query="insert into projeto";
+    $query="select count(*)as total from projeto;";
     $result = $conn->query($query);
+    $codigo=0;
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
             $codigo = $row["total"]+1;
         }
     }
-    
-    
+    //
+    $sql_query="insert into projeto (codigo,nome,descricao,fk_fiador_codigo)  values ($codigo ,'$nome', '$desc' , $fiador);";
+    echo $sql_query;
+    $result = $conn->query($sql_query);
+
 
 }
 

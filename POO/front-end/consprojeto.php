@@ -1,32 +1,16 @@
 <?php
-function gerarPDF(){
-    echo "helo";
-}
+include '../back-end/connection.php'; 
 
 $codigo_projeto = $_POST['cod_proj']; 
 $sql_query="SELECT  bolsista.nome AS nomeB,
                             atividade.descricao AS ativ,
                             atividade.data AS data,
-                            TIMEDIFF (atividade.hora_fim,atividade.hora_inicio  )AS tempo
+                            TIMEDIFF (atividade.hora_fim , atividade.hora_inicio  )AS tempo
                     FROM atividade
                         INNER JOIN  bolsista ON atividade.fk_bolsista_matricula = bolsista.matricula
                         INNER JOIN projeto ON atividade.fk_projeto_codigo=projeto.codigo
-                        WHERE projeto.nome='banco de horas' 
+                        WHERE projeto.codigo=$codigo_projeto 
                         ORDER BY nomeB; ";
-function conexaoBanco(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "banco_ic_horas";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-    return $conn;
-}
 
 $conn=conexaoBanco();
 $result = $conn->query($sql_query);
@@ -62,7 +46,7 @@ if ($result->num_rows > 0) {
 $tabela=$tabela."</table>";
 //
 $sql_query="SELECT projeto.nome AS nome_projeto,
-                   projeto.descicao AS descricao,
+                   projeto.descricao AS descricao,
                    CONCAT(bolsista.nome,' ', bolsista.sobrenome) AS nome_bolsista,                    
                    CONCAT(coordenador.nome,' ',coordenador.sobrenome)AS nome_coor    
             FROM projeto 
@@ -71,9 +55,9 @@ $sql_query="SELECT projeto.nome AS nome_projeto,
             WHERE projeto.codigo =".$codigo_projeto.";";
 $result = $conn->query($sql_query);
 
-$titulo;
-$descricao;
-$coordenador;
+$titulo="";
+$descricao="";
+$coordenador="";
 $bolsistas=""; 
 
 if ($result->num_rows > 0) {

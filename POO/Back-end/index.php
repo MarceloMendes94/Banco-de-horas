@@ -1,7 +1,6 @@
 <html>
     <head>
 
-
     </head>
     <body>
 
@@ -49,8 +48,24 @@
             <br>
             <input type='submit' value='enviar' name="btn_proj" >
 
-        </form>
-
+        
+        <br>
+        <br>
+        nome:<input type="text" name="exemple" value=
+		"<?php
+            require_once 'connection.php';
+            $var=isset( $_POST['exemple'] );
+            $conn=conexaoBanco();
+            $query  = "SELECT nome FROM bolsista WHERE nome LIKE '$var%';";
+            $result = $conn->query($query);
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo utf8_encode($row["nome"]);                           
+                }
+            }?>
+		"> 
+         </form> 
 
 
 
