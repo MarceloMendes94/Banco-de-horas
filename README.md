@@ -124,24 +124,15 @@ captura de Tela<br>
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-        Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
-        Referenciar todas as fontes referentes a :
-        a) obtenção dos dados
-        b) obtenção de códigos reutilizados
-        c) fontes de estudo para desenvolvimento do projeto
+[script criação do banco](...)
 
 
 #### 8.2 INCLUSÃO DO SCRIPT DE INSERÇÃO DOS DADOS
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        b) inclusão das instruções para execução de outros procedimentos necessários (caso existam)
-        c) formato .SQL
+
+[scritp insert](...)
 
 #### 8.3 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script 
-        (tabelas e estruturas de dados + dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+[scritp de criação e inserção](here)
         
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
