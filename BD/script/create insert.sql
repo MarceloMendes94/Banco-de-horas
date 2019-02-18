@@ -1,4 +1,4 @@
-*php my admim*/
+/*php my admim*/
 CREATE TABLE Projeto (
     codigo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome varchar(75),

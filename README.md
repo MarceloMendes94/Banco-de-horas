@@ -124,15 +124,15 @@ captura de Tela<br>
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-[script criação do banco](...)
+[script criação do banco](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/script/create.sql)
 
 
 #### 8.2 INCLUSÃO DO SCRIPT DE INSERÇÃO DOS DADOS
 
-[scritp insert](...)
+[scritp insert](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/script/insert.sql)
 
 #### 8.3 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-[scritp de criação e inserção](here)
+[scritp de criação e inserção](https://github.com/MarceloMendes94/Banco-de-horas/blob/master/BD/script/create%20insert.sql)
         
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
