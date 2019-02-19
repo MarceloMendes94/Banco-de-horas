@@ -124,7 +124,12 @@ Function Projeto_insert($nome , $desc , $mat , $fiador){
 
 }
 
-
+Function Bolsista_insert($nome,$mat,$sobrenome,$projeto){
+    $conn=conexaoBanco();
+    $insert="insert into bolsista (nome,matricula,sobrenome,fk_projeto_codigo)  values ('$nome','$mat','$sobrenome',$projeto);";
+    $result = $conn->query($insert);
+    //echo $insert;
+} 
 
 
 
