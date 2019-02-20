@@ -21,27 +21,34 @@
                 <h3>Login no banco de horas </h3>
                 <br>
                 <br>
-                <form>
+                <form action="" method="post">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Matrícula</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="matrícula">
-                    <small id="emailHelp" class="form-text text-muted">matrícula do sistema acadêmico.</small>
+                    <label for="in_mat">Matrícula</label>
+                    <input type="text" class="form-control" id="in_mat" name="mat" aria-describedby="emailHelp" placeholder="matrícula" require="require">
+                    <small id="mat_help" class="form-text text-muted">matrícula do sistema acadêmico.</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="senha">
+                    <label for="in_senha">Senha</label>
+                    <input type="password" name="pwd" class="form-control" id="in_senha" placeholder="senha" require="require">
                   </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary" name="btn_login">Login</button>
                 </form>
             </div>
         </div>    
       </div>
-      
-      
-      
-      
-      
-      
+    <?php
+      if(isset($_POST['btn_login']) ){
+        require_once '../controller/i_login.php';          
+          $mat=$_POST['mat'];
+          $pwd=$_POST['pwd'];
+          echo $mat.$pwd; 
+          $auth=new Login(i_login::login($mat,$pwd) );
+          
+      }
+       
+    
+    
+    ?>
       
       
 
