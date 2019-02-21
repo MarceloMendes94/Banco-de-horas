@@ -1,4 +1,4 @@
-# Progehpe:  Projeto de getenciamento de horas do Polo Embrapii
+# Projeto de Iniciação científica:  Projeto de gerenciamento de horas do Polo Embrapii
 Trabalho desenvolvido por uma bolsa de iniciação científica, junto ao polo de inovação vitória, que fica localizado no campus Ifes campus Vitória.
 
 # Sumário
