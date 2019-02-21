@@ -41,7 +41,6 @@
           require_once '../controller/logincontroller.php';          
           $mat=$_POST['mat'];
           $pwd=$_POST['pwd'];
-          echo "marcelo";//$mat.$pwd; 
           $auth = new LoginController();
           $auth-> autenticar($mat,$pwd);
       }

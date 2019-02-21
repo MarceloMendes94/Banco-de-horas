@@ -3,7 +3,6 @@
     Class LoginController{
       // chamar metodos de conexão
       function autenticar($mat,$pwd){
-          echo"marcelo";
         realizar_login($mat,$pwd);
       }
     }

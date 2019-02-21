@@ -19,53 +19,8 @@ function conexaoBanco(){
     return $conn;
 }
 
-/** 
- * recebe um obejto connection e uma valor para query
- * retorna com um string html 
- */
-function queryapresentacao($conn,$codigo_projeto){
-	$titulo="";
-    $descricao="";
-    $coordenador="";
-    $bolsistas="";    
-	$sql_query="SELECT projeto.nome AS nome_projeto,
-                    projeto.descricao AS descricao,
-                    CONCAT(bolsista.nome,' ', bolsista.sobrenome) AS nome_bolsista,                    
-                    CONCAT(coordenador.nome,' ',coordenador.sobrenome)AS nome_coor    
-                FROM projeto 
-                INNER JOIN bolsista ON bolsista.fk_projeto_codigo =".$codigo_projeto."
-                INNER JOIN coordenador ON coordenador.fk_projeto_codigo =".$codigo_projeto."
-                WHERE projeto.codigo =".$codigo_projeto.";";
-    $conn   = conexaoBanco();    
-    $result = $conn->query($sql_query);   
 
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            $titulo      = $row["nome_projeto"];
-            $descricao   = $row["descricao"];
-            $coordenador = $row["nome_coor"];
-            $bolsistas   = $bolsistas.$row["nome_bolsista"]."<br>";       
-            
-        }
-    }    
-    $string_saida="
-        <div class='row justify-content-center' style='background-color:#BFBFBF;'>
-                <div class='col-5'>
-                        <h1>".utf8_encode($titulo)."</h1>
-                    <br>
-                    <h3>Coordenador:</h3><h5>".utf8_encode($coordenador)."</h5>
-                    <br>
-                    <h3>bolsistas:</h3><h5>".utf8_encode($bolsistas)."</h5> 
-                    <br>
-                </div>
-                <div class='col-5'>
-                    <h1><br></h1>  
-                    <h3>Descricao:</h3><h6>".utf8_encode($descricao)."</h6>                
-                </div>
-        </div>";
-    return $string_saida;        
-}
+
 
 /**
  *  insert
@@ -130,9 +85,112 @@ Function Bolsista_insert($nome,$mat,$sobrenome,$projeto){
     $result = $conn->query($insert);
     //echo $insert;
 } 
-//teste
+
+
+
+
+/*logincontroller */
 function realizar_login($mat,$pwd){
-    echo "oi".$mat.$pwd;
+    //autenticar e criar cockies
+    $conn = conexaoBanco();
+    if ($mat=="20151bsi0436" && $pwd=="sorvete"){
+        //criar cookie
+        session_start();
+        $_SESSION['matricula']=$mat;
+        //redimensionar
+        header('Location:../view/coorpage.php');
+    }  
 }
 
+/* relatorio controller */
+function criar_tabela($codigo_projeto){
+    $conn=conexaoBanco();
+    $sql_query="SELECT  bolsista.nome AS nomeB,
+                                atividade.descricao AS ativ,
+                                atividade.data AS data,
+                                TIMEDIFF (atividade.hora_fim , atividade.hora_inicio  )AS tempo
+                        FROM atividade
+                            INNER JOIN  bolsista ON atividade.fk_bolsista_matricula = bolsista.matricula
+                            INNER JOIN projeto ON atividade.fk_projeto_codigo=projeto.codigo
+                            WHERE projeto.codigo=$codigo_projeto 
+                            ORDER BY nomeB; ";
+    $result = $conn->query($sql_query);
+    $tabela="
+            <style>
+            table{
+                border:1px solid black;
+            }
+            tr{
+                border:1px solid black;
+            }
+            th{
+                border:1px solid black;
+            }
+            </style>    
+            <table>       
+            <tr>
+                <th> Nome do bolsista</th>
+                <th> Atividade feita </th>
+                <th> dia             </th>
+                <th> tempo gasto     </th>
+            </tr>"; 
+            
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    $tabela=$tabela."<tr>
+                            <th>".utf8_encode($row["nomeB"])."</th>
+                            <th>".utf8_encode($row["ativ"])."</th>
+                            <th>".utf8_encode($row["data"])."</th>
+                            <th>".utf8_encode($row["tempo"])."</th> </tr>";
+                }
+            }
+    $tabela=$tabela."</table>";   
+    return $tabela; 
+}
+
+
+function queryapresentacao($codigo_projeto){
+	$titulo="";
+    $descricao="";
+    $coordenador="";
+    $bolsistas="";    
+	$sql_query="SELECT projeto.nome AS nome_projeto,
+                    projeto.descricao AS descricao,
+                    CONCAT(bolsista.nome,' ', bolsista.sobrenome) AS nome_bolsista,                    
+                    CONCAT(coordenador.nome,' ',coordenador.sobrenome)AS nome_coor    
+                FROM projeto 
+                INNER JOIN bolsista ON bolsista.fk_projeto_codigo =".$codigo_projeto."
+                INNER JOIN coordenador ON coordenador.fk_projeto_codigo =".$codigo_projeto."
+                WHERE projeto.codigo =".$codigo_projeto.";";
+    $conn   = conexaoBanco();    
+    $result = $conn->query($sql_query);   
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $titulo      = $row["nome_projeto"];
+            $descricao   = $row["descricao"];
+            $coordenador = $row["nome_coor"];
+            $bolsistas   = $bolsistas.$row["nome_bolsista"]."<br>";       
+            
+        }
+    }    
+    $string_saida="
+        <div class='row justify-content-center' style='background-color:#BFBFBF;'>
+                <div class='col-5'>
+                        <h1>".utf8_encode($titulo)."</h1>
+                    <br>
+                    <h3>Coordenador:</h3><h5>".utf8_encode($coordenador)."</h5>
+                    <br>
+                    <h3>bolsistas:</h3><h5>".utf8_encode($bolsistas)."</h5> 
+                    <br>
+                </div>
+                <div class='col-5'>
+                    <h1><br></h1>  
+                    <h3>Descricao:</h3><h6>".utf8_encode($descricao)."</h6>                
+                </div>
+        </div>";
+    return $string_saida;        
+}
 ?>

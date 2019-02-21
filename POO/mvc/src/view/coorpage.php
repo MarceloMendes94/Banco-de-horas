@@ -1,7 +1,9 @@
 <?php
-session_start();
-unset($_SESSION['projeto']);
+  if(isset($_SESSION['projeto'])){
+    unset($_SESSION['projeto']);
+  }
 
+?>
 <!doctype html>
 <html lang='en'>
   <head>
@@ -72,4 +74,4 @@ unset($_SESSION['projeto']);
   </body>
 </html>
 
-?>
+

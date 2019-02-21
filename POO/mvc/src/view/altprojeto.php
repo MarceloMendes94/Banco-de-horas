@@ -1,7 +1,7 @@
 <?php
 // fazendo biscoitos 
 
-include '../back-end/connection.php'; 
+include '../connection/connection.php'; 
 session_start();
 if(isset($_POST['cod_proj'])!=NULL  ){  
   $_SESSION['projeto']=$_POST['cod_proj'];  
