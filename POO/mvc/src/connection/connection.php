@@ -1,8 +1,8 @@
 <?php
 //imports
-require_once 'Fiador.php';
-require_once 'Coordenador.php';
-require_once 'Membro.php';
+//require_once 'Fiador.php';
+//require_once 'Coordenador.php';
+//require_once 'Membro.php';
 // cria um connexão e retorna um objeto connection
 function conexaoBanco(){
     $servername = "localhost";
@@ -130,7 +130,9 @@ Function Bolsista_insert($nome,$mat,$sobrenome,$projeto){
     $result = $conn->query($insert);
     //echo $insert;
 } 
-
-
+//teste
+function realizar_login($mat,$pwd){
+    echo "oi".$mat.$pwd;
+}
 
 ?>

@@ -36,14 +36,14 @@
             </div>
         </div>    
       </div>
-    <?php
+   <?php
       if(isset($_POST['btn_login']) ){
-        require_once '../controller/i_login.php';          
+          require_once '../controller/logincontroller.php';          
           $mat=$_POST['mat'];
           $pwd=$_POST['pwd'];
-          echo $mat.$pwd; 
-          $auth=new Login(i_login::login($mat,$pwd) );
-          
+          echo "marcelo";//$mat.$pwd; 
+          $auth = new LoginController();
+          $auth-> autenticar($mat,$pwd);
       }
        
     
