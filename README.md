@@ -11,7 +11,7 @@ Marcelo Passamai Mendes : marceloestudoifes@gmail.com<br>
 Os pólos Embrapii são centros tecnológicos que tem a missão de atender demandas de pesquisa do setor produtivo.
 Atualmente o pólo de inovação Vitória, que fica localizado dentro do IFES Campus Vitória esta vinculado a Embrapii.
 O processo de contabilização de horas das bolsas de iniciação científica do pólo de inovação Vitória é feito de forma manual, com um relatório feito em papel.
-Segundo o representante do pólo há uma necessidade de tornar esse porcesso Online, com um pequeno sistema de bando de horas,
+Segundo o representante do pólo há uma necessidade de tornar esse porcesso Online, com um pequeno sistema de banco de horas,
 para esse fim foi criado junto a CAPES um processo de iniciação científica para resolver essa demanda. 
 
     
