@@ -68,51 +68,7 @@ captura de Tela<br>
 
 #### 5.4 DESCRIÇÃO DOS DADOS 
 
-1. tabela funcao <br>
 
-| campo | descrição |
-|----|----|
-| codigo | numero que representa uma função desempenhada |
-| nome | nome de uma função dentro de um projeto |
-
-2. tabela pessoa <br>
-
-| campo | descrição |
-|----|----|
-| matricula | valor da matricula do acadêmico, chave primaria |
-| nome | primeiro nome da pessoa |
-| sobrenome | sobrenome da pessoa |
-| cpf | valor do cpf da pessoa |
-| horas | numero de horas trabalhadas dem IC valor máximo 20 horas |
-
-``` a tabela pessoa precisa de uma chave estrageira para receber função ```
-
-3. tabela tarefa <br>
-
-| campo | descrição |
-|----|----|
-| id_ registro | chave primaria para registro de atividades |
-| dia | data da atividade realizada |
-| hora_inicio | horario do começo das atividades |
-| hora_fim | horario do fim atividades |
-| descrição | o que foi feito na atividade |
-| autor | chave estrageira com a matricula de quem realizou a atividade |
-
-4. tabela projeto <br>
-
-| campo | descrição |
-|----|----|
-| idenficador | chave primaria que identifica o projeto |
-| nome | nome do projeto |
-| descricao | descriçaõ breve do projeto |
-| fiador | chave estrangeira com dado refente a quem financiou o projeto |
-
-5. tabela finacimento <br>
-
-| campo | descrição |
-|----|----|
-| codigo | chave primária refente ao  fiador |
-| nome | nome do fiador |	
 
 ### 6	MODELO LÓGICO<br>
 
