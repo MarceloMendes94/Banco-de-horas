@@ -14,7 +14,7 @@
     $mat    = $_SESSION["matricula"];
 
     $sql_query="insert into atividade( descricao , data , hora_inicio , hora_fim , fk_Projeto_codigo , fk_Bolsista_matricula )values('".utf8_encode($desc)."' , '".$data."' , '".$inicio."' ,  '".$fim."'  ,  ".$projeto."  , '".$mat."');";
-    $conn   = $db_obj->create();//cirar con
+    $conn   = $db_obj->create();//criar con
     $db_obj->conectar($conn);//abre conn
     $result = $conn->query($sql_query); //executa query
     header('Location: ../view/bolsista.php');

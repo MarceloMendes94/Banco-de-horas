@@ -73,13 +73,13 @@
                             <h5 class="card-header"> <i class="fas fa-sync-alt"   style="margin:2px;"></i> alterar projeto </h5>
                             <div class="card-body">                                
                                 <p class="card-text">
-                                   inserir novos membros <br>
-                                    <br>
-                                    <br>
-                                    <br>
+                                    Inserir novos membros <br>
+                                    Remover membro<br>
+                                    <input type="text" class="form-control" placeholder="nome do projeto">
+                                   
                                 </p>
 
-                                <a href="#" class="btn btn-primary">
+                                <a href="coordenador_alterar.php" class="btn btn-primary">
                                     <i class="fas fa-sync-alt"   style="margin:2px;"></i>Alterar Projeto.
                                 </a>
                             </div>
@@ -89,7 +89,7 @@
 
                     <div class="col-md-3 offset-md-1">  
                         <div class="card" id="cartao">
-                            <h5 class="card-header"> <i class="fas fa-book"      style="margin:2px;"></i> gerar relatório</h5>
+                            <h5 class="card-header"> <i class="fas fa-book"   style="margin:2px;"></i> gerar relatório</h5>
                             <div class="card-body">
                                 <p class="card-text">
                                     Gerar relatório do projeto.<br>
@@ -137,7 +137,7 @@
                                     <br>
                                 </p>
 
-                                <a href="#" class="btn btn-primary">
+                                <a href="coordenador_visualizar_fiador.php" class="btn btn-primary">
                                     <i class="fa fa-search"   style="margin:2px;"></i>Alterar Projeto.
                                 </a>
                             </div>

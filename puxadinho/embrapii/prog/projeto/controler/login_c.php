@@ -45,5 +45,5 @@
                echo "usuario indevido"; 
         }    
     }
-    mysql_close($conn);
+    
 ?>
