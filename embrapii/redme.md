@@ -34,11 +34,7 @@ cada coordenador, bolsista e pesquisador podem fazer infinitos projetos desde qu
 ![imagem](BD/modelos_img/Lógico.png)
 
 ## Scripts
-[create](BD/Script/create.sql)
 
-[insert](BD/Script/insert.sql)
-
-[create+insert](BD/Script/create_insert.sql)
 
 ## projeto da arquitetura do sistema
 
