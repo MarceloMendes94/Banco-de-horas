@@ -48,7 +48,7 @@ cada coordenador, bolsista e pesquisador podem fazer infinitos projetos desde qu
 
 
 ### 4. DOCUMENTO DE REQUISISTOS
-[Documento de quisitos](embrapii/Documentacao/documento_requisitos.md)
+[Documento de requisitos](embrapii/Documentacao/documento_requisitos.md)
 
 ### 5. MODELO CONCEITUAL<br>
 
