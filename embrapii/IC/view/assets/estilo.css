@@ -1,0 +1,63 @@
+/* core da pagina de login*/
+body{
+    background-color: GhostWhite;
+}
+
+#logo_login{
+    position:relative;
+    left:20px;
+}
+label{
+    width: 130px;
+}
+footer{
+    margin-top: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 17rem;
+    color: GhostWhite;
+    position:relative;
+    background-image: radial-gradient( #16862b 20% ,#0a691c 60%);
+
+}
+footer a {
+    color: GhostWhite;
+    text-decoration: none;
+}
+table{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+#col_1{
+    width: 120px;
+    text-align: center;
+    background-color: red;
+}
+#col_2{
+    width: 450px;
+    background-color: red;
+}
+#col_3{
+    width: 120px;
+    text-align: center;
+    background-color: red;
+}
+#col_4{
+    width: 120px;
+    text-align: center;
+    background-color: red;
+}
+#col_5{
+    width: 120px;
+    text-align: center;
+    background-color: red;
+}
+#col_6{
+    width: 120px;
+    text-align: center;
+    background-color: red;
+}
+
