@@ -44,9 +44,8 @@
                 <div class="card">
                 <h5 class="card-header">Visualizar Atividades</h5>
                 <div class="card-body">
-                  <p class="card-text">
-                  </p>
-                  <a href="" class="btn btn-primary">Visualizar</a>
+                  <p class="card-text"> Aqui você pode visualizar as atividades feitas pelos bolsistas. </p>
+                  <a href="../control/c_visualizarAtividades.php" class="btn btn-primary">Visualizar</a>
                 </div>
               </div>
             </div>
@@ -57,9 +56,8 @@
                 <div class="card">
                 <h5 class="card-header">Validar Atividades</h5>
                 <div class="card-body">
-                  <p class="card-text">
-                  </p>
-                  <a href="../control/validacao.php" class="btn btn-primary">Validar </a>
+                  <p class="card-text"> Valide as atividades feitas pelo seu bolsista. </p>
+                  <a href="../control/c_validacao.php" class="btn btn-primary">Validar </a>
                 </div>
               </div>
             </div>

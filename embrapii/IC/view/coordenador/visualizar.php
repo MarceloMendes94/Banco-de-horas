@@ -5,8 +5,6 @@
         <title></title>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        <?php session_start(); echo $_SESSION['tabela']; ?>
     </body>
 </html>

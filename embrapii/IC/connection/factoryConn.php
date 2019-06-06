@@ -86,9 +86,16 @@ class Connection extends Config{
         $result = $stmt->fetchAll();
         return $result; 
     }
+    function mostrarAtividades_Coordenador($fk){
+                $query  = "SELECT atividade.id as id, atividade.descricao as descricao, DATE_FORMAT(`data`,'%d/%m/%Y') as dia, hora_inicio, hora_fim, validacao, TIMEDIFF( hora_fim,hora_inicio) as total"
+                . " FROM       atividade "
+                . "INNER JOIN projeto on (atividade.fk_projeto = projeto.id)"
+                . "INNER JOIN orientador on (projeto.fk_orientador=orientador.id)"
+                . "WHERE orientador.id=$fk "
+                . "order by  DATE_FORMAT(`data`,'%Y'), DATE_FORMAT(`data`,'%m'),DATE_FORMAT(`data`,'%d');";
+        $stmt   = $this->pdo->prepare($query);
+        $run    = $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result; 
+    }
 }
-   
-    
-
-
-

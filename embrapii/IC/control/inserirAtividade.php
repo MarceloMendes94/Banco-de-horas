@@ -4,8 +4,7 @@
         $data   = $_GET['data'];
         $inicio = $_GET['inicio'];
         $fim    = $_GET['fim'];
-        $desc   = $_GET['desc'];
-        
+        $desc   = $_GET['desc'];        
        
         $conn = new Connection();
         $codigoProjeto= $conn->codProjeto();   
